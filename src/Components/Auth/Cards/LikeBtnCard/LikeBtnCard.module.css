@@ -1,0 +1,34 @@
+/*Style for Titles for all Cards*/
+  
+.LikeContainer{
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.NumberLike{
+  color: #00153d;
+  font-family: poppinMedium;
+  font-size: .9em;
+}
+
+.smallNumberLike{
+  color: #00153d;
+  font-family: poppinMedium;
+  font-size: .8em;
+}
+
+
+@media screen and (min-width: 500px) {
+  .LikeContainer:hover{
+    cursor: pointer;
+  }
+  
+}
+
+  @media screen and (max-width: 500px) {
+
+  
+  }
+ 
+  

@@ -1,0 +1,90 @@
+/*Colors
+main: "#227ABD",
+secondMain:"#00a7da",
+        mainfade: "#EEF6FC",
+        mainText1: "#9ba1a6",
+        blueMarine: "#00bff3",
+        secondText: "#0077a1",
+        border: "#b6b5bc",
+        text: "#001B2E",
+        background: "#f4f4f5",
+        icon: "#687076",
+        barStyle: StyleBarLight,
+        indicator: "#9ba1a6",
+        bgColorBlocs: "#f8f8f8",
+        MainTextCards: "#11181C",
+        successColor: "#00cc00",
+        ErrorColor: "#cc0000",
+*/
+
+/*import Police font*/
+@font-face {
+  font-family: poppinLight;
+  src: url('../styles/font/Poppins-Light.ttf');
+}
+@font-face {
+  font-family: poppinRegular;
+  src: url('../styles/font/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: MonoRegular;
+  src: url('../styles/font/SpaceMono-Regular.ttf');
+}
+
+@font-face {
+  font-family: MonoBold;
+  src: url('../styles/font/SpaceMono-Bold.ttf');
+}
+
+@font-face {
+  font-family: poppinMedium;
+  src: url('../styles/font/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: poppinBold;
+  src: url('../styles/font/Poppins-Black.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100lvh;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: poppinRegular;
+}
+
+a {
+  text-decoration: none;
+}
+
+.border {
+  border: solid black 1px;
+}
+.borderRed {
+  border: solid red 1px;
+}
+/*import */
+@import '@/styles/Home/index.css';
+@import '@/styles/Log_Reg/index.css';
+@import '@/styles/Search/index.css';
+@import '@/styles/Components/Loading.css';
+@import '@/styles/Components/InputField.css';
+@import '@/styles/Components/AllComponents.css';
+@import '@/styles/Components/MobileNav.css';
+
+.AppleAdjust {
+  font-family: poppinLight;
+  font-size: 16px;
+}

@@ -1,0 +1,611 @@
+/*Animations*/
+@keyframes shapesAnimated {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+@keyframes animated {
+  from {
+    opacity: 0;
+    transform: rotate(60deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+
+.HomePage {
+  padding-top: 150px;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  background: linear-gradient(160deg, #f4f4f5, #00153d 85%);
+  padding-bottom: 30px;
+  box-shadow: 0px 0 10px #b6b5bc;
+}
+
+.HomePage .WelcomeMsg {
+  width: 100%;
+
+  /* display*/
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 0;
+}
+.ContainerActionsCard {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  z-index: 20;
+}
+.HomePage .roleBloc {
+  width: 80%;
+  max-width: 1300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  z-index: 2;
+}
+
+/*Shapes*/
+.HomePage .wideSquare {
+  position: absolute;
+  left: 20px;
+  top: -35px;
+  transform: rotate(25deg);
+  animation: shapesAnimated ease-in-out 2s;
+}
+
+.HomePage .wideCircle {
+  opacity: 0.7;
+  position: absolute;
+  left: 20px;
+  top: -20px;
+  animation: shapesAnimated ease-in-out 2s;
+}
+.HomePage .shapeIllustration {
+  position: absolute;
+  width: 40vw;
+  height: 40vw;
+  max-width: 500px;
+  max-height: 500px;
+  top: 120px;
+  right: 15%;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(-40deg, #f4f4f5 5%, #00153d);
+  z-index: 0;
+  opacity: 0.4;
+}
+
+/*Text*/
+.WelcomeMsg .TextWelcm {
+  position: relative;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.WelcomeMsg .TextWelcm .TitlePage {
+  font-family: poppinBold;
+  font-size: 2.6em;
+  color: #00277f;
+  text-align: center;
+  width: 100%;
+}
+
+.WelcomeMsg .TextWelcm .presentationPage {
+  font-family: poppinLight;
+  font-size: 1.1em;
+  color: #000;
+  width: 45%;
+  text-align: center;
+}
+
+/*Links*/
+.Links {
+  display: flex;
+  align-items: center;
+}
+
+.Links a {
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+}
+
+.Links .RegisterLink {
+  color: #fff;
+  background-color: #00277f;
+  border-radius: 30px;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 8px #64748b;
+}
+
+/*text role Bloc*/
+.HomePage .roleBloc .HeadBloc {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.WorkingSpace {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.WorkingSpace .illustr_bloc {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.WorkingSpace .bloc_inverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.WorkingSpace .illustr_bloc .text_descr {
+  padding-top: 80px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.WorkingSpace .illustr_bloc .text_descr .titleCard {
+  font-family: poppinBold;
+  font-size: 1.3em;
+  color: #00a7da;
+}
+
+.WorkingSpace .illustr_bloc .text_descr p {
+  font-family: poppinLight;
+  font-size: 1em;
+  color: #e2e8f0;
+}
+
+.WorkingSpace img {
+  width: 350px;
+  height: 350px;
+}
+
+/* Tools Cards*/
+.About {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 60px 20px;
+}
+.About .TitleAbout {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.About .TitleAbout span {
+  font-family: poppinBold;
+  font-size: 1.8em;
+  color: #00277f;
+}
+
+.About .TitleAbout div {
+  font-family: poppinLight;
+  font-size: 0.9em;
+  color: #000;
+}
+
+/* DownLoad Bloc*/
+.DownLoad {
+  height: fit-content;
+  background-color: #fff;
+  box-shadow: 0 0 8px #e2e8f0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+}
+
+.DownLoad .BlocNews {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.DownLoad .BlocNews .NewsText {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.DownLoad .BlocNews .titleBlocNews {
+  color: #00277f;
+  font-family: poppinBold;
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.DownLoad .BlocNews p {
+  text-align: center;
+  color: #000;
+  font-family: poppinLight;
+  font-size: 0.9em;
+}
+
+.ApplicationsButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.ApplicationsButtons a {
+  padding: 5px 20px;
+  color: #000;
+  font-family: poppinLight;
+  font-size: 0.8em;
+}
+
+.ApplicationsButtons img {
+  width: 36px;
+  height: 36px;
+}
+
+.ApplicationsButtons .button {
+  padding: 5px 20px;
+  border-radius: 4px;
+  width: 150px;
+  height: 40px;
+  background: linear-gradient(45deg, #e2e8f0, #edf4fd);
+  background: -webkit-linear-gradient(45deg, #e2e8f0, #edf4fd);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.ApplicationsButtons .button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px #e2e8f0;
+}
+
+.footPage {
+  width: 90vw;
+  margin: auto;
+  padding: 30px 0;
+  color: #455a64;
+  background-color: #fafafa;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+/*Medias querries*/
+@media screen and (max-width: 1150px) {
+  /*Text*/
+  .WelcomeMsg .TextWelcm .TitlePage {
+    font-size: 2.2em;
+    width: 100%;
+  }
+
+  .WelcomeMsg .TextWelcm .presentationPage {
+    font-size: 1em;
+    width: 95%;
+  }
+  /*Illustration*/
+  .WelcomeMsg .illustretion {
+    width: 45%;
+  }
+  .HomePage .wideSquare {
+    top: 50%;
+  }
+  .HomePage .wideCircle {
+    opacity: 0.7;
+    left: 0;
+    top: 40px;
+  }
+  .HomePage .roleBloc {
+    width: 90%;
+  }
+  .HomePage .shapeIllustration {
+    right: 1%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .HomePage {
+    padding-top: 120px;
+  }
+
+  .WelcomeMsg .TextWelcm {
+    width: 80%;
+    gap: 25px;
+  }
+
+  .WelcomeMsg .TextWelcm .TitlePage {
+    font-size: 1.8em;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .WelcomeMsg .TextWelcm .presentationPage {
+    font-size: 0.95em;
+  }
+  /*Illustration*/
+  .WelcomeMsg .illustretion {
+    display: none;
+  }
+  .ContainerActionsCard {
+    width: 90%;
+  }
+
+  /*text role Bloc*/
+
+  .HomePage .roleBloc .titleBloc {
+    font-size: 1.4em;
+  }
+
+  .HomePage .roleBloc .presentationBloc {
+    width: 95%;
+    font-size: 1em;
+  }
+
+  .WorkingSpace .illustr_bloc .text_descr {
+    width: 300px;
+  }
+
+  .WorkingSpace .illustr_bloc .text_descr .titleCard {
+    font-size: 1.1em;
+  }
+
+  .WorkingSpace .illustr_bloc .text_descr p {
+    font-size: 0.95em;
+  }
+
+  .WorkingSpace img {
+    width: 300px;
+    height: 300px;
+  }
+
+  /*DownLoad*/
+  .DownLoad .BlocNews {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .DownLoad .BlocNews .titleBlocNews {
+    font-size: 1.3em;
+  }
+
+  .DownLoad .BlocNews p {
+    font-size: 0.9em;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  /*text role Bloc*/
+  .HomePage .roleBloc {
+    width: 90%;
+    padding: 20px 15px;
+  }
+
+  .HomePage .roleBloc .HeadBloc {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .HomePage .roleBloc .titleBloc {
+    text-align: left;
+    font-size: 1.3em;
+  }
+
+  .HomePage .roleBloc .presentationBloc {
+    width: 99%;
+    text-align: left;
+    font-size: 1em;
+  }
+
+  .WorkingSpace {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .WorkingSpace .illustr_bloc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .WorkingSpace .bloc_inverse {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .WorkingSpace .illustr_bloc .text_descr {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .WorkingSpace .illustr_bloc .text_descr .titleCard {
+    font-size: 1.1em;
+  }
+
+  .WorkingSpace .illustr_bloc .text_descr p {
+    font-size: 0.9em;
+  }
+
+  .WorkingSpace img {
+    width: 80vw;
+    height: 80vw;
+  }
+
+  /*NewsLetter*/
+  .DownLoad .BlocNews {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .DownLoad .BlocNews .NewsText {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .DownLoad .BlocNews .titleBlocNews,
+  .DownLoad .LastPubHome .TiltePubCard {
+    font-size: 1.1em;
+  }
+
+  .DownLoad .BlocNews p {
+    width: 100%;
+    font-size: 0.9em;
+  }
+
+  .ContainerFieldNewsEmail {
+    width: 100%;
+  }
+  .illustrationNewsLetter {
+    width: 95%;
+    height: 60vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .WelcomeMsg .TextWelcm .TitlePage {
+    font-size: 1.8em;
+    width: 95%;
+  }
+  .HomePage {
+    padding-top: 130px;
+  }
+
+  .WelcomeMsg .TextWelcm {
+    width: 95%;
+    gap: 18px;
+  }
+  .HomePage .wideSquare {
+    left: -20px;
+    top: 50%;
+  }
+  .ContainerActionsCard {
+    width: 94%;
+  }
+  .HomePage .wideCircle {
+    opacity: 0.4;
+    top: 50px;
+  }
+  .HomePage .roleBloc {
+    width: 86%;
+  }
+  .Tools .TitleTools span {
+    font-size: 1.1em;
+  }
+
+  .Tools .TitleTools div {
+    font-size: 0.9em;
+  }
+
+  /*NewsLetter*/
+  .ContainerFieldNewsEmail .NewsLetterField {
+    padding: 11px 8px;
+    font-size: 0.9em;
+    border-radius: 2px;
+  }
+  .ContainerFieldNewsEmail button {
+    border-radius: 3px;
+  }
+  .DownLoad .LastPubHome .containerAllMiniCard {
+    gap: 25px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .HomePage .roleBloc .titleBloc {
+    text-align: left;
+    font-size: 1.1em;
+  }
+
+  .HomePage .roleBloc .presentationBloc {
+    width: 99%;
+    text-align: left;
+    font-size: 0.9em;
+  }
+  .WorkingSpace .illustr_bloc .text_descr .titleCard {
+    font-size: 1em;
+  }
+  .WelcomeMsg .TextWelcm .TitlePage {
+    font-size: 1.5em;
+  }
+
+  .WelcomeMsg .TextWelcm {
+    width: 90%;
+    gap: 18px;
+  }
+  .HomePage .wideSquare {
+    left: -40px;
+    top: 48%;
+  }
+
+  .HomePage .roleBloc {
+    width: 84%;
+  }
+  .About .TitleAbout {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .WelcomeMsg .TextWelcm .TitlePage {
+    font-size: 1.2em;
+  }
+  .WelcomeMsg .TextWelcm .presentationPage {
+    font-size: 0.8em;
+    width: 90%;
+  }
+
+  .WelcomeMsg .TextWelcm {
+    gap: 10px;
+  }
+
+  .Links a {
+    width: 80%;
+  }
+}

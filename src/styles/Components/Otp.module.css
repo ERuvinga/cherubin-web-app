@@ -1,0 +1,42 @@
+/*Style for OTP Component*/
+
+.Container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.FocusedInput {
+  padding: 0 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: poppinMedium;
+  color: #00277f;
+  border: #00277f 0.6px solid;
+}
+
+.Input {
+  padding: 0 15px;
+  height: 50px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: poppinMedium;
+  color: #64748b;
+  border: #9ba1a6 1px solid;
+}
+
+/*Medias Querries*/
+@media screen and (max-width: 450px) {
+  .Container {
+    flex-wrap: wrap;
+  }
+  .Input {
+    padding: 0 10px;
+    font-size: 0.8em;
+  }
+}

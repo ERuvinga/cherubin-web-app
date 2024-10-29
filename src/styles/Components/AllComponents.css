@@ -1,0 +1,607 @@
+/* style for All components */
+@keyframes loadingAnim {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*
+1. Login and Register Button
+*/
+
+.ContainerBtnLoader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sendDatasBtn {
+  border: none;
+  width: 100%;
+  height: 50px;
+  box-shadow: 0 0 8px 0 #e2e8f0;
+  font-family: poppinBold;
+  font-size: 1.1em;
+  color: white;
+  border-radius: 8px;
+  background-color: #227abd;
+}
+
+.sendDatasLoading {
+  width: 0;
+  height: 0;
+  padding: 14px;
+  border: 3px #001b2e solid;
+  border-bottom-color: transparent;
+  border-radius: 20px;
+  animation: loadingAnim 0.8s linear infinite;
+}
+
+.disbledBtn {
+  opacity: 0.6;
+}
+
+.sendDatasBtn:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+/*
+2. line -Or-
+*/
+
+.ContainerLine {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ContainerLine .line {
+  height: 1px;
+  width: 35%;
+  background-color: #e2e8f0;
+}
+
+.ContainerLine .TextEnterLine {
+  color: #64748b;
+  font-size: 0.83em;
+  text-align: center;
+}
+
+/*
+3. Auth buttons
+*/
+
+.GFAuthBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  width: 47%;
+  padding: 15px 0;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 0 4px #e2e8f0;
+  border-radius: 8px;
+
+  color: #455a64;
+}
+.GFAuthBtn:hover {
+  cursor: pointer;
+}
+.GFAuthBtn img {
+  width: 25px;
+  height: 25px;
+}
+
+.GFAuthBtn span {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/*
+4. Back to Home button
+*/
+.containerBtnToHome {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.containerBtnToHome .BtnToHome {
+  background-color: #fff;
+  color: #64748b;
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 8px #e2e8f0;
+  border-radius: 30px;
+}
+
+.containerBtnToHome .BtnToHome .Icone {
+  width: 20px;
+  color: #64748b;
+}
+
+/*
+5. NavBar
+*/
+.navigationContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  padding: 25px 0;
+}
+
+.navigation {
+  width: 90%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f5f5f4;
+  box-shadow: 0px 0 40px #b6b5bc;
+  border-radius: 10px;
+}
+
+.navigation .MobileNav {
+  display: flex;
+  width: 90%;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation .MenuIcone {
+  width: 30px;
+  color: #64748b;
+}
+
+.navigation .navList {
+  display: none;
+}
+
+.navList .itemList {
+  color: #455a64;
+  font-size: 0.9em;
+  border-radius: 15px;
+  padding: 4px 22px;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.navList .itemList:hover {
+  background-color: #edf4fd;
+  color: #7a7979;
+}
+
+.navList .itemListselected {
+  color: #00277f;
+  font-size: 0.9em;
+  border-radius: 15px;
+  padding: 4px 22px;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.NavLinks {
+  display: none;
+}
+
+.NavLinks a {
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.NavLinks .LoginLink {
+  background-color: #00277f;
+  color: #fff;
+  box-shadow: 0 0 19px #e2e8f0;
+  border: #00277f solid 1px;
+  border-radius: 6px;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+6. Filters
+*/
+.Filters {
+  display: none;
+}
+.FiltersMobile {
+  background-color: #fff;
+  width: 100%;
+  max-width: 280px;
+  height: fit-content;
+  /**/
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 0 0 6px #e2e8f0;
+  border: solid 2px #e2e8f0;
+}
+
+.TitleFilter {
+  font-size: 0.95em;
+  padding: 10px;
+  color: #64748b;
+  border-bottom: solid 1px #e2e8f0;
+}
+
+.containerFilter {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.Filters .containerFilter .addTagGroup,
+.FiltersMobile .containerFilter .addTagGroup {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.Filters .containerFilter .filterSelect,
+.FiltersMobile .containerFilter .filterSelect {
+  width: 100%;
+  height: 38px;
+  padding: 4px 8px;
+  font-family: poppinRegular;
+  border: solid 1px #edf4fd;
+  color: #64748b;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.containerFilter .filterSelect:focus {
+  outline: none;
+  border: solid 1px #e2e8f0;
+}
+
+.addTagGroup .addBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e4c81d;
+  padding: 0 4px;
+  border-radius: 4px;
+  box-shadow: 0 0 4px #e2e8f0;
+  transition: all 0.3s ease-in-out;
+}
+
+.addTagGroup .addBtn:hover {
+  cursor: pointer;
+  box-shadow: 0 0 4px #90a8c9;
+}
+.addTagGroup .icone {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+}
+
+.containerFilter .TagsSelected {
+  width: 100%;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/*
+7. Tags
+*/
+
+.HashtagComponent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.HashtagComponent .subIcone {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transition: all 0.2s ease-in-out;
+  color: #455a64;
+}
+
+.HashtagComponent .subIcone:hover {
+  cursor: pointer;
+  color: #e4c81d;
+}
+.HashtagComponent .subIcone .icone {
+  width: 15px;
+  height: 15px;
+}
+
+.HashtagComponent .HashtagView {
+  font-family: poppinLight;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 15px;
+  border-radius: 15px;
+  background-color: #e2e8f0;
+  color: #64748b;
+  font-size: 0.92em;
+}
+
+/*
+8. Searching
+*/
+
+.FieldContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+.FieldContainer .SeachingField {
+  width: 90%;
+  padding: 16px;
+  font-size: 0.9em;
+  color: #64748b;
+  font-family: poppinRegular;
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 0 4px #e2e8f0;
+}
+
+.FieldContainer .AppleAdjust {
+  font-family: poppinLight;
+  font-size: 16px;
+}
+.FieldContainer button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #00277f;
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 8px #edf4fd;
+  transition: all 0.3s ease-in-out;
+}
+
+.FieldContainer button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  box-shadow: 0 0 10px #90a8c9;
+}
+
+.FieldContainer .icone {
+  width: 30px;
+  height: 30px;
+}
+.SeachingField:focus {
+  outline: none;
+}
+
+/*
+9. Shapes decorations
+*/
+.square {
+  width: 45px;
+  height: 45px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: solid 1px #b6b5bc;
+}
+
+.circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: solid 1px #b6b5bc;
+}
+
+.wideCircle {
+  height: 120px;
+  border-radius: 50px;
+}
+
+.wideSquare {
+  height: 120px;
+  border-radius: 10px;
+  transform: rotate(45deg);
+}
+
+/*
+9. Tools Card
+*/
+.ToolCard {
+  width: 300px;
+  min-height: 150px;
+  border-radius: 8px;
+  background-color: #f5f5f4;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: all 0.6s ease-in-out;
+}
+
+.ToolCard .pictureContainer {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(45deg, #e2e8f0, #edf4fd);
+  background: -webkit-linear-gradient(45deg, #e2e8f0, #edf4fd);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.ToolCard .MoreTool {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px;
+}
+
+.ToolCard .ToolName {
+  font-family: poppinBold;
+  font-size: 1.2em;
+  color: #455a64;
+}
+
+.ToolCard .ToolDescription {
+  overflow-y: hidden;
+  height: 120px;
+  font-family: poppinLight;
+  font-size: 0.9em;
+  color: #64748b;
+}
+
+/*Media querry*/
+@media screen and (min-width: 950px) {
+  .Filters {
+    width: 20%;
+    max-width: 350px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    box-shadow: 0 0 6px #e2e8f0;
+    border: solid 2px #e2e8f0;
+  }
+
+  .navigation {
+    width: 80%;
+    max-width: 1300px;
+    justify-content: space-around;
+  }
+
+  .navigation .MenuIcone {
+    display: none;
+  }
+
+  .navigation .MobileNav {
+    width: auto;
+  }
+
+  .navigation .navList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .NavLinks {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+  }
+
+  .ToolCard:hover {
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 0 10px #64748b;
+    transform: scale(1.01);
+  }
+  .containerBtnToHome .BtnToHome:hover {
+    cursor: pointer;
+    background-color: rgba(0, 39, 127, 0.2);
+  }
+  .containerBtnToHome .BtnToHome .Icone:hover {
+    color: #00277f;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .GFAuthBtn {
+    gap: 5px;
+
+    width: 47%;
+    padding: 13px 0;
+    border-radius: 5px;
+  }
+  .GFAuthBtn img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .GFAuthBtn span {
+    font-size: 0.8em;
+  }
+  .ContainerLine .TextEnterLine {
+    font-size: 0.8em;
+  }
+  .ContainerLine .line {
+    height: 1px;
+    width: 30%;
+    background-color: #e2e8f0;
+  }
+  .sendDatasBtn {
+    font-size: 0.9em;
+  }
+  .FieldContainer .SeachingField {
+    width: 100%;
+    padding: 12px;
+    box-shadow: 0 0 10px #e2e8f0;
+  }
+  .FieldContainer button {
+    padding: 11px 18px;
+    border-radius: 4px;
+    box-shadow: 0 0 6px #edf4fd;
+  }
+  .FieldContainer .icone {
+    width: 20px;
+    height: 20px;
+  }
+  .HashtagComponent .HashtagView {
+    padding: 4px 15px;
+    font-size: 0.8em;
+  }
+  .FiltersMobile {
+    width: 100%;
+    max-width: none;
+  }
+
+  .FiltersMobile .TitleFilter {
+    font-size: 0.85em;
+    padding: 5px 10px;
+    font-weight: bold;
+  }
+
+  .addTagGroup .addBtn {
+    padding: 0 6px;
+    border-radius: 3px;
+    box-shadow: 0 0 6px #e2e8f0;
+    transition: all 0.1s ease-in-out;
+  }
+
+  .addTagGroup .icone {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .GFAuthBtn {
+    width: 100%;
+  }
+}

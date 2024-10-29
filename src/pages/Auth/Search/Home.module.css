@@ -1,0 +1,100 @@
+/*Style for OTP Component*/
+
+.HomeContainer {
+  width: 100%;
+  height: 100lvh;
+  background-color: #f0f3f8;
+  display: flex;
+  flex-direction: column;
+}
+
+.ContainerApp {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.ContentDatas {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+
+.ContentDatas .NavTitle {
+  display: flex;
+  padding: 18px 0;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.ContentDatas .NavTitle .Buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.ContentDatas .NavTitle .ReloadingBtn {
+  background-color: #227ABD;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #b6b5bc;
+}
+
+.ContentDatas .NavTitle h1 {
+  color: #11181c;
+  font-size: 1.1em;
+  font-family: poppinBold;
+}
+
+.ContainerDatasApp {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.CardContainer {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.FilterList {
+  flex-grow: 1;
+  height: auto;
+}
+
+.FilterList .containerItems {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 20px 0;
+  border-width: 0;
+  border-style: solid;
+  border-color: #b6b5bc;
+  border-bottom-width: 1px;
+}
+.FilterList .Title {
+  color: #9ba1a6;
+  font-size: .9em;
+  font-family: poppinRegular;
+}
+
+/*Medias Querries*/
+@media screen and (min-width: 550px) {
+  .ContentDatas .NavTitle .Buttons .Filter:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}

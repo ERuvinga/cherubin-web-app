@@ -1,0 +1,81 @@
+/*Style for OTP Component*/
+
+.ContainerPage {
+  width: 100%;
+  height: 100lvh;
+  background-color: #f0f3f8;
+  display: flex;
+  flex-direction: column;
+}
+
+.ContainerApp {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.ContentDatas {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top:100px;
+  gap: 10px;
+}
+
+
+.ContentDatas .NavTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 25px 0;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.ContentDatas .NavTitle h1 {
+  color: #11181c;
+  font-size: 1.4em;
+  font-family: poppinBold;
+}
+.ContentDatas .Title {
+  color: #9ba1a6;
+  text-align: center;
+  font-size: .9em;
+  font-family: poppinRegular;
+}
+
+.CardContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/*Formulaires*/
+
+.CardContainer .formulaire {
+  width: 90%;
+  gap: 30px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+/*Input component*/
+.formulaire .InputsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+

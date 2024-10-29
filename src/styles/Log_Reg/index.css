@@ -1,0 +1,259 @@
+/* containt Style for login and register pages é*/
+
+.LoginPage,
+.RegisterPage,
+.VerifyEmailPage,
+.SuccessPage,
+.UpdatingDataPage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulaire {
+  width: 45%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.formulaire .ContainerForm {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.formulaire .ContainerForm .TilteForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.formulaire .ContainerForm .TilteForm .LogoImg {
+  width: 150px;
+  height: 150px;
+}
+
+.formulaire .ContainerForm .TextTilteForm {
+  gap: 10px;
+}
+
+.formulaire .ContainerForm .successAction {
+  width: 94vw;
+  height: 94vw;
+  max-width: 280px;
+  max-height: 250px;
+}
+
+.ContainerForm .TilteForm .PageTitle {
+  margin: 0;
+  font-family: poppinBold;
+  font-size: 1.6em;
+  color: #227abd;
+  text-align: center;
+}
+
+.ContainerForm .TilteForm .SubTitle {
+  margin: 0;
+  font-family: poppinRegular;
+  font-size: 0.9em;
+  color: #64748b;
+  text-align: center;
+}
+
+/*Update Userdatas screen*/
+.formulaire .ContainerForm .UserDatasHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding-top: 20px;
+}
+.formulaire .ContainerForm .TitlePage {
+  font-family: poppinBold;
+  font-size: 1.2em;
+  color: #000;
+  text-align: center;
+}
+
+.formulaire .ContainerForm .ImageContainer {
+  position: relative;
+}
+.formulaire .ContainerForm .ImageContainer .ProfileImage {
+  border: #f8f8f8 2px solid;
+  border-radius: 50px;
+}
+.formulaire .ContainerForm .ImageContainer .RounderProfileImage {
+  border: #b6b5bc 2px solid;
+  border-radius: 30px;
+  background-size: cover;
+}
+.formulaire .ContainerForm .ImageContainer .PlusIcone {
+  background-color: #00277f;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 5px;
+  right: 2px;
+  border: #f5f5f4 2px solid;
+}
+
+.formulaire .ContainerForm .name {
+  margin: 0;
+  font-family: poppinBold;
+  font-size: 1.1em;
+  color: #00277f;
+  text-align: center;
+}
+
+.formulaire .ContainerForm .email {
+  font-family: poppinLight;
+  font-size: 0.85em;
+  color: #64748b;
+  text-align: center;
+}
+
+/*Input component*/
+.formulaire .InputsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulaire .InputsContainer .AuthorityDocContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: #b6b5bc 1px dotted;
+  border-radius: 6px;
+  height: 50px;
+}
+
+.formulaire .InputsContainer .AuthorityDocContainer span {
+  font-family: poppinRegular;
+  font-size: 0.7em;
+  color: #64748b;
+  text-align: center;
+}
+
+.formulaire .ResendCodeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.formulaire .ResendCodeContainer .ResendCallToAction {
+  font-family: poppinRegular;
+  font-size: 0.9em;
+  color: #64748b;
+  text-align: center;
+}
+
+.formulaire .ResendCodeContainer .ResendBlocBtn {
+  font-family: poppinRegular;
+  font-size: 0.9em;
+  color: #00277f;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.formulaire .ResendCodeContainer .ResendBlocBtn:hover {
+  cursor: pointer;
+}
+.formulaire .pswdForgot {
+  text-align: center;
+  color: #64748b;
+  font-family: poppinMedium;
+  font-size: 0.9em;
+  text-decoration: underline;
+}
+
+.OtherLinks {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.otherPageLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.otherPageLink span {
+  color: #000;
+  text-align: center;
+  font-size: 0.95em;
+}
+
+.otherPageLink a {
+  color: #00277f;
+  font-weight: bold;
+  font-size: 0.95em;
+  text-align: center;
+}
+
+/*Medias Querrys*/
+@media screen and (max-width: 950px) {
+  .formulaire {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .formulaire .ContainerForm {
+    width: 85%;
+    gap: 18px;
+  }
+
+  .ContainerForm .TilteForm .PageTitle {
+    font-size: 1.2em;
+  }
+
+  .formulaire .ContainerForm .TilteForm .PageDesc {
+    font-size: 0.8em;
+  }
+
+  .formulaire .InputsContainer {
+    gap: 10px;
+  }
+  .formulaire .ContainerForm .TitlePage {
+    font-size: 1em;
+  }
+  .logRegNav {
+    display: block;
+  }
+  .otherPageLink span,
+  .otherPageLink a,
+  .formulaire .pswdForgot {
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .otherPageLink {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

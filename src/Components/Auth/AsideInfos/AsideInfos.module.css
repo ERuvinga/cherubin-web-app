@@ -1,0 +1,168 @@
+/*Menu  Style*/
+.ContainerMenu {
+  background-color: transparent;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 5px #b6b5bc;
+  background-color: #fff;
+  overflow-y: auto;
+  gap: 40px;
+  position: relative;
+}
+
+.BetwenneContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/*Profile datas*/
+.AuthUserDatas {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.AuthUserDatas .MenuProfileImage {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: #b6b5bc solid 2px;
+}
+.AuthUserDatas .EmailAndName {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.AuthUserDatas .Name {
+  color: #227ABD;
+  font-size: 1.2em;
+  font-family: poppinBold;
+}
+
+.AuthUserDatas .Email {
+  color: #001B2E;
+  font-size: 0.8em;
+  font-family: poppinLight;
+}
+
+/*Menu items*/
+.MenuList {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.MenuList .Item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.MenuList .ItemList {
+  color: #7a7979;
+  font-size: 0.9em;
+  font-family: poppinRegular;
+}
+
+.MenuList .ItemListSelected {
+  color: #00277f;
+  font-size: 0.9em;
+  font-family: poppinRegular;
+}
+
+/*Menu Footer*/
+
+.LogoutBtn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.LogoutBtn .Btn {
+  border: none;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 8px #e2e8f0;
+  border-radius: 30px;
+}
+
+
+.LogoutBtn .Btn:hover{
+  cursor: pointer;
+  background-color: #EEF6FC;
+  border: #EEF6FC solid 2px;
+}
+
+.ContainerFooterofMenu {
+  width: 80%;
+  display: flex;
+}
+
+
+.ContainerFooterofMenu .AddButon {
+  width: 100%;
+  border: none;
+  background-color: #227ABD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 6px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #e2e8f0;
+}
+
+.ContainerFooterofMenu .AddButon:hover{
+  cursor: pointer;
+  opacity: .8;
+}
+
+.ContainerFooterofMenu .AddButon span {
+  font-size: 1em;
+  color: #EEF6FC;
+  font-family: MonoRegular;
+  text-align: center;
+}
+
+
+/*Medias Querries*/
+@media screen and (min-width: 550px) {
+  .Authnavigation .SearchBtn:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  .MenuList .Item:hover {
+    opacity: 0.7;
+  }
+  .ContainerFooterofMenu .Buttons .All:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .ContainerMenu{
+    display: none;
+  }
+}
+

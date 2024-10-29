@@ -1,0 +1,57 @@
+/*
+ Auth navBar
+*/
+
+.ContainerBtn {
+  padding: 7px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.SelectedBtn {
+  border: 1px solid #227ABD;
+  background-color: #227ABD;
+  box-shadow: 0 0 5px #b6b5bc;
+}
+
+.UnselectedBtn {
+  background-color: transparent;
+  border: solid 1px #b6b5bc;
+}
+
+.ContainerBtn .Content {
+  font-size: 0.9em;
+  font-family: poppinLight;
+}
+
+.SelectedBtn .Content {
+  color: #ebf1ff;
+  font-family: poppinBold;
+}
+
+.UnselectedBtn .Content {
+  color: #9ba1a6;
+}
+
+.Authnavigation .AddButton span {
+  color: #227ABD;
+  font-size: 0.85em;
+  font-family: poppinLight;
+}
+
+.AuthNavLinks .NavProfileImage {
+  border-radius: 50%;
+  border: #b6b5bc solid 2px;
+  width: 45px;
+  height: 45px;
+}
+
+/*Medias Querries*/
+@media screen and (min-width: 550px) {
+  .ContainerBtn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}

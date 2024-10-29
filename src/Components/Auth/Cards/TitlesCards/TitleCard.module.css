@@ -1,0 +1,16 @@
+/*Style for Titles for all Cards*/
+  
+.ContentTitle {
+  font-family: poppinBold;
+  font-size: 1.1em;
+  color: #00153d;
+  padding: 0;
+  }
+
+  
+  @media screen and (max-width: 500px) {
+
+  
+  }
+ 
+  

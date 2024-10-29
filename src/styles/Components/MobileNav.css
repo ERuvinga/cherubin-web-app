@@ -1,0 +1,333 @@
+/*style for Menu for view < 950px*/
+
+/*Animations keyframes for Menu*/
+@keyframes wrapAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.7;
+  }
+}
+
+@keyframes MenuAnimation {
+  from {
+    opacity: 0.7;
+    left: -100%;
+  }
+
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes wrapAnimationInverse {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes MenuAnimationClosed {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes ClosedDisplaying {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes noDisplayMenu {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.WrapeNav {
+  background-color: #64748b;
+  width: 100%;
+  height: 100vh;
+  animation: wrapAnimation 0.8s ease-in-out forwards;
+
+  /*position*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.NoWrapeNav {
+  background-color: #64748b;
+  width: 100%;
+  height: 100vh;
+  animation: wrapAnimationInverse 0.8s ease-in-out forwards;
+
+  /*position*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.ContainerMenuDisplay {
+  background-color: transparent;
+  width: 100%;
+  height: 100vh;
+
+  /*position*/
+  position: fixed;
+  top: 0;
+  left: -100%;
+  display: flex;
+  animation: MenuAnimation 0.8s ease-in-out forwards;
+  z-index: 101;
+}
+
+.ContainerMenuNoDisplay {
+  background-color: transparent;
+  width: 100%;
+  height: 100vh;
+
+  /*position*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  animation: MenuAnimationClosed 0.8s ease-in-out forwards;
+  z-index: 101;
+}
+
+.MobileNavBar {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px #64748b;
+}
+.ContainerClosedMenuBtn {
+  width: 70px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.closeMenu {
+  width: 22px;
+  height: 22px;
+  color: #e2e8f0;
+  animation: ClosedDisplaying 1.8s ease-in-out forwards;
+}
+
+.nodisplayMenu {
+  animation: noDisplayMenu 0.8s ease-in-out forwards;
+}
+
+.displayMenu {
+  animation: ClosedDisplaying 0.8s ease-in-out forwards;
+}
+
+.nodisplay {
+  opacity: 0;
+  width: 35px;
+  height: 35px;
+  color: #fff;
+  padding: 12px 25px 0 0;
+}
+
+/*
+#. Mobile_NavBar
+*/
+
+.Mnavigation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+}
+
+.Mnavigation .Mlogo {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6em;
+}
+
+.Mnavigation .MnavList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0px 22px;
+}
+
+.Mnavigation .MnavList .MitemList {
+  color: #7a7979;
+  font-size: 0.9em;
+  padding: 6px 0;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.MnavList .MitemListselected {
+  color: #00277f;
+  font-size: 0.9em;
+  padding: 6px 0;
+  display: flex;
+  gap: 4px;
+  transition: all 0.5s;
+}
+
+.MNavLinks .NewsText {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MNavLinks .NewsText {
+  margin: auto;
+  width: 92%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.MNavLinks p {
+  text-align: center;
+  color: #000;
+  font-family: poppinLight;
+  font-size: 0.9em;
+}
+
+.MNavLinks .ApplicationsButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.MNavLinks .ApplicationsButtons .Dbutton {
+  padding: 5px 20px;
+  border-radius: 4px;
+  width: 95%;
+  max-width: 150px;
+  height: 40px;
+  background: linear-gradient(45deg, #e2e8f0, #edf4fd);
+  background: -webkit-linear-gradient(45deg, #e2e8f0, #edf4fd);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.MNavLinks .ApplicationsButtons .Dbutton:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px #e2e8f0;
+}
+
+/*Mobile Filters*/
+/*Animations keyframes for Filters*/
+@keyframes FiltersMobilsAnimeHidden {
+  from {
+    opacity: 1;
+    right: 5px;
+  }
+
+  to {
+    opacity: 0.5;
+    right: -85%;
+  }
+}
+
+@keyframes FiltersMobilsAnime {
+  from {
+    opacity: 0.7;
+    right: -85%;
+  }
+
+  to {
+    opacity: 1;
+    right: 5px;
+  }
+}
+
+.MobileFiltersContainer {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+  /*position*/
+  position: fixed;
+  bottom: 85px;
+  gap: 6px;
+  z-index: 103;
+}
+
+.displayFilter {
+  animation: FiltersMobilsAnime 0.8s ease-in-out forwards;
+}
+.nodisplayFilter {
+  animation: FiltersMobilsAnimeHidden 0.8s ease-in-out forwards;
+}
+/*Media querry*/
+@media screen and (min-width: 950px) {
+  .ContainerFilter {
+    display: none;
+  }
+  .MobileFiltersContainer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .ContainerFilter {
+    width: 65%;
+  }
+  .MobileFiltersContainer {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .MNavLinks {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .MNavLinks a {
+    font-size: 0.85em;
+    padding: 9px 30px;
+  }
+  .MobileFiltersContainer {
+    width: 85%;
+  }
+}

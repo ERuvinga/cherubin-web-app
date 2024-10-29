@@ -1,0 +1,92 @@
+/* styles for input field*/
+
+/* File Input fields*/
+.fileInput {
+  display: none;
+}
+
+.FieldsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.FieldsContainer .InputLabel {
+  font-family: poppinRegular;
+  color: #64748b;
+  font-size: 0.85em;
+}
+
+.FieldsContainer .inputContainer {
+  padding: 0 8px;
+  height: 45px;
+  background-color: transparent;
+  border: solid 2px #b6b5bc;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.FieldsContainer select {
+  width: 100%;
+  font-family: MonoRegular;
+  color: #64748b;
+  background-color: transparent;
+  font-size: 100%;
+  border: none;
+}
+
+.FieldsContainer select:focus {
+  outline: none;
+}
+
+.FieldsContainer .inputField {
+  font-family: MonoRegular;
+  color: #64748b;
+  background-color: transparent;
+  font-size: 100%;
+  width: 100%;
+  border: none;
+}
+
+.FieldsContainer .AppleAdjust {
+  font-family: poppinRegular;
+  color: #64748b;
+  background-color: transparent;
+  font-size: 100%;
+  width: 100%;
+  border: none;
+  font-family: poppinLight;
+}
+
+.FieldsContainer .EyesIcone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FieldsContainer .ErrorMsg {
+  font-size: 0.7em;
+  color: #cc0000;
+  font-family: poppinRegular;
+}
+
+.FieldsContainer input:focus {
+  outline: none;
+}
+
+/*Media querry*/
+@media screen and (max-width: 500px) {
+  .FieldsContainer .inputField {
+    font-size: 0.8em;
+    width: 80%;
+  }
+  .FieldsContainer select {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+}

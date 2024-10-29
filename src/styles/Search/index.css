@@ -1,0 +1,148 @@
+/*style for searching page*/
+
+@keyframes BtnFilterMobileAninated {
+  from {
+    opacity: 0.4;
+    bottom: 0px;
+    box-shadow: 0 0 8px #e3f2fd;
+  }
+
+  to {
+    opacity: 1;
+    bottom: 30px;
+    box-shadow: 0 0 8px #90a8c9;
+  }
+}
+
+.ContSearching {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.ContSearching .ContFilterAndField {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 90px;
+  gap: 5px;
+  overflow-y: auto;
+}
+
+.ContSearching .ContFilterAndField .Searching {
+  width: 50%;
+  max-height: 100%;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.Searching .AllResults {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+.AllResults::-webkit-scrollbar-button,
+.AllResults::-webkit-scrollbar-thumb,
+.AllResults::-webkit-scrollbar {
+  display: none;
+}
+
+.Searching .IllustrationSerch {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Searching .IllustrationSerch .ErrorMsg {
+  text-align: center;
+  color: #00153d;
+  font-family: poppinBold;
+  font-size: 1.3em;
+}
+
+.Searchimage {
+  width: 100%;
+  max-width: 600px;
+  height: 450px;
+}
+
+.FiltersBtn {
+  display: none;
+}
+
+/*Media querries*/
+@media screen and (max-width: 950px) {
+  .ContSearching {
+    gap: 15px;
+  }
+  .ContSearching .ContFilterAndField {
+    padding-top: 72px;
+  }
+  .ContSearching .ContFilterAndField .Searching {
+    width: 94%;
+  }
+  .Searching .AllResults {
+    gap: 20px;
+  }
+
+  .FiltersBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    z-index: 99;
+    right: 10px;
+    border-radius: 50%;
+    background-color: #c11233;
+    animation: BtnFilterMobileAninated 1.5s ease-in-out forwards;
+  }
+  .FiltersBtn .icone {
+    padding: 12px;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .ContSearching {
+    height: 100svh;
+  }
+
+  .Searchimage {
+    width: 95%;
+    height: 95vw;
+  }
+
+  .ContSearching .ContFilterAndField .Searching {
+    padding: 0 12px;
+    gap: 15px;
+  }
+  .Searching .IllustrationSerch .ErrorMsg {
+    font-size: 1em;
+  }
+  .Searching .AllResults {
+    max-height: 90vh;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .Searching .IllustrationSerch .ErrorMsg {
+    font-size: 0.9em;
+  }
+}

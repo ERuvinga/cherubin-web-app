@@ -1,0 +1,18 @@
+/*Style for Titles for all Cards*/
+  
+.Description {
+  color: #64748b;
+  font-family: poppinLight;
+  font-size: .9em;
+  }
+
+  
+  @media screen and (max-width: 500px) {
+
+    .Description {
+      font-size: 0.8em;
+    }
+  
+  }
+ 
+  
