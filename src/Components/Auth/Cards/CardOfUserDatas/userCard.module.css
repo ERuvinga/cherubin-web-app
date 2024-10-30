@@ -1,0 +1,84 @@
+/*Style for card*/
+
+.Container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 4px;
+    border:#b7c5d8 solid 1px;
+    transition: all .5s ease-in-out;
+  }
+
+.Container:hover{
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 0 8px #dddde2;
+  background-color: #fff;
+}
+
+.UserPub {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .Container .DeleteBtn{
+    background-color: #cc0000;
+    color: #EEF6FC;
+    padding: 8px 30px;
+    font-family: poppinRegular;
+    font-size: .9em;
+    border: none;
+    border-radius: 4px;
+    opacity: .7;
+    text-align: center;
+  }
+  .Container .DeleteBtn:hover{
+    cursor: pointer;
+    opacity: 1;
+  }
+ 
+  .UserPub .profilImg {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+  }
+ 
+  .UserPub .EmailName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .UserPub .nameUser {
+    padding: 0px;
+    font-family: poppinBold;
+    font-size: .9em;
+    color: #000;
+  }
+  
+  .UserPub .email {
+    color: #64748b;
+    font-size: 0.8em;
+    padding: 0px;
+  }
+
+  
+  @media screen and (max-width: 500px) {
+
+    .UserPub .profilImg {
+      width: 40px;
+      height: 40px;
+    }
+    .UserPub .Badget {
+        bottom: 3px;
+        right: -5px;
+      }
+  }
+  
+  @media screen and (max-width: 330px) {
+  }
+  
