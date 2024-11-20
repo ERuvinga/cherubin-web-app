@@ -9,9 +9,9 @@ export const AgreeConditionState = atom({
 export const API = atom({
   key: 'apiDatas',
   default: {
-    LAN_LINK: 'https://cherubin-restefull-api.onrender.com',
+    LINK: 'https://cherubin-restefull-api.onrender.com',
     LOCAL_LINK: 'http://localhost:5000',
-    LINK: 'http://localhost:8010/proxy', //for local Proxy Testing
+    LAN_LINK: 'http://localhost:8010/proxy', //for local Proxy Testing
     SIGN_IN: '/Authentification/AdminLogin',
     SIGN_UP: '/Authentification/CreateUser',
 
