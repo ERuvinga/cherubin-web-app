@@ -8,46 +8,73 @@ import HomeMenu from '@/Components/Auth/Menu';
 import BtnTypePost from '@/Components/Auth/TypeContentButton';
 import AsideInfosDatasUser from '@/Components/Auth/AsideInfos';
 import LoadingComponent from '@/Components/LoadingComponent';
+import ToastComponent from '@/Components/Toast';
 
 //Customs Hooks
 import useLocalStorage, { LocalStorage } from '@/hooks/UselocalDatas';
 import useToken from '@/hooks/useToken';
+import { useCustomQuery } from '@/hooks/useFetch';
 
 //Atoms and states
-import { HomeFilterSelected } from '@/state/user';
-import { useRecoilState, useSetRecoilState } from 'recoil';
+import { DealersUses, HomeFilterSelected } from '@/state/user';
+import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
 import { itemMenuSelected } from '@/state/MenuDatas';
+import { API } from '@/state/Api';
+import { MsgServerState } from '@/state/SignInUpDatas';
 
 //Style and Constants
-import AuthStyle from '@/pages/Auth/Home/Home.module.css';
-import { FILTERACCOUNTS } from '@/Constants/Type';
-import { ArrowPathIcon } from '@heroicons/react/24/solid';
+import AuthStyle from '@/pages/Auth/Dealers/Dealers.module.css';
+import {
+  FILTERACCOUNTS,
+  MessageServerType,
+  REQUEST_KEYS,
+  UserRole,
+} from '@/Constants/Type';
+import {
+  ArrowPathIcon,
+  CloudArrowUpIcon,
+  UserGroupIcon,
+} from '@heroicons/react/24/solid';
 import SessionUser from '@/utils/Session';
+import UserCard from '@/Components/Auth/Cards/CardOfUserDatas';
 
 const AuthHome = () => {
   //states
-  const setitemMenuSelctedValue = useSetRecoilState(itemMenuSelected);
   const [ReloadingList, setReloadingList] = useState(false);
   const [Storage, setStorage] = useState({} as LocalStorage);
+  const [LoadingUsers, setLoadingUser] = useState(true);
+
+  //Atoms
   const [CheckUserSessionloading, setCheckUserSessionloading] = useState(true);
+  const setitemMenuSelctedValue = useSetRecoilState(itemMenuSelected);
+  const SetServerMessageDisplay = useSetRecoilState(MsgServerState);
+  const Api = useRecoilValue(API);
+  const [Users, setUser] = useRecoilState(DealersUses);
 
-  //Hooks
-  const navigation = useRouter();
+  //Handles
 
-  // checking datas of User
-  useEffect(() => {
-    console.log(ReloadingList);
-    // item selected defined
-    setitemMenuSelctedValue(1);
-    setStorage(useLocalStorage);
-    // Checking if User have a valid Session
-    SessionUser(
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      useToken().LogInState().isLogin,
-      setCheckUserSessionloading,
-      navigation
-    );
-  }, []);
+  const ReloadDatas = () => {
+    //fuction to reloading datas
+    setReloadingList((lastValue) => !lastValue);
+  };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleFecthingError = (Error: any) => {
+    console.log(Error.response);
+    SetServerMessageDisplay({
+      // Display Message Of Server
+      hidden: false,
+      message: 'Erreur de chargement',
+      messageType: MessageServerType.ERROR,
+    });
+    setLoadingUser(false);
+  };
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleFecthingSuccess = (datas: any) => {
+    console.log(datas.AllUsers);
+    setUser(datas.AllUsers);
+    setLoadingUser(false);
+  };
 
   //Filter datas
   const [FilterPost, setFilterPost] = useRecoilState(HomeFilterSelected);
@@ -66,9 +93,43 @@ const AuthHome = () => {
     },
   ];
 
+  //Hooks
+  const navigation = useRouter();
+  const useFeching = useCustomQuery({
+    key: REQUEST_KEYS.HOME_DEALER,
+    link: `${Api.LINK}${Api.GET_USERS}/${UserRole.DEALER}/${FilterPost}`,
+    hangleError: handleFecthingError,
+    handleSucces: handleFecthingSuccess,
+  });
+
+  // checking datas of User
+  useEffect(() => {
+    // item selected
+    setitemMenuSelctedValue(1);
+    setStorage(useLocalStorage);
+
+    // Checking if User have a valid Session
+    SessionUser(
+      // eslint-disable-next-line react-hooks/rules-of-hooks
+      useToken().LogInState().isLogin,
+      setCheckUserSessionloading,
+      navigation
+    );
+
+    //valid session
+    setLoadingUser(true);
+    useFeching.refetch(); // get users datas
+  }, []);
+
+  useEffect(() => {
+    //Reloading list
+    setLoadingUser(true);
+    useFeching.refetch(); // get users datas
+  }, [ReloadingList, FilterPost]);
+
   return (
     <>
-      <HeadDatas title="Dealers list" description="Dealers list Users" />
+      <HeadDatas title="Home" description="Home, smart meter DashBoard" />
       {CheckUserSessionloading ? (
         <Loading hiddenText={false} contenteText="Chargement..." />
       ) : (
@@ -77,8 +138,9 @@ const AuthHome = () => {
             <section className={`${AuthStyle.ContainerApp}`}>
               <HomeMenu />
               <section className={`${AuthStyle.ContentDatas}`}>
+                <ToastComponent />
                 <div className={`${AuthStyle.NavTitle}`}>
-                  <h1>Clients</h1>
+                  <h1>Vendeurs</h1>
                 </div>
                 <section className={`${AuthStyle.ContainerDatasApp}`}>
                   <aside className={`${AuthStyle.FilterList}`}>
@@ -86,7 +148,7 @@ const AuthHome = () => {
                       Filtrage des données sur bas du status des comptes, (All,
                       Actif et non actif)
                     </span>
-                    <div className={`${AuthStyle.ReloadingBtn}`}>
+                    <div className={`${AuthStyle.Buttons}`}>
                       <div className={`${AuthStyle.containerItems}`}>
                         {FiltersTab.map((item, index) => (
                           <BtnTypePost
@@ -100,19 +162,63 @@ const AuthHome = () => {
                       </div>
                       <div
                         className={`${AuthStyle.ReloadingBtn}`}
-                        onClick={() =>
-                          setReloadingList((lastValue) => !lastValue)
-                        }
+                        onClick={ReloadDatas}
                       >
-                        <ArrowPathIcon width={23} height={23} color="#ebf1ff" />
+                        <ArrowPathIcon width={25} height={25} color="#ebf1ff" />
                       </div>
                     </div>
                   </aside>
                   <section className={`${AuthStyle.CardContainer}`}>
-                    <LoadingComponent
-                      hiddenText={false}
-                      contenteText="Chargement"
-                    />
+                    <>
+                      {LoadingUsers ? (
+                        <LoadingComponent
+                          hiddenText={false}
+                          contenteText="Chargement"
+                        />
+                      ) : (
+                        <>
+                          {useFeching.isSuccess ? (
+                            <>
+                              {Users.length > 0 ? (
+                                <div className={`${AuthStyle.UserList}`}>
+                                  {Users.map((item, index) => (
+                                    <UserCard
+                                      key={index}
+                                      User={item}
+                                      ReloadingListFuction={ReloadDatas}
+                                    />
+                                  ))}
+                                </div>
+                              ) : (
+                                <div className={`${AuthStyle.Error}`}>
+                                  <UserGroupIcon
+                                    width={50}
+                                    height={50}
+                                    color="#9ba1a6"
+                                  />
+
+                                  <p className={`${AuthStyle.ErrorText}`}>
+                                    Aucun Client trouvé
+                                  </p>
+                                </div>
+                              )}
+                            </>
+                          ) : (
+                            <div className={`${AuthStyle.Error}`}>
+                              <CloudArrowUpIcon
+                                width={50}
+                                height={50}
+                                color="#9ba1a6"
+                              />
+
+                              <p className={`${AuthStyle.ErrorText}`}>
+                                Une Erreur s&apos;est produite
+                              </p>
+                            </div>
+                          )}
+                        </>
+                      )}
+                    </>
                   </section>
                 </section>
               </section>

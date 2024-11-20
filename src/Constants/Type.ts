@@ -6,16 +6,18 @@ export enum IconeTypes {
   MEETINGS = 'MEGAPHONE',
 }
 
-//POSTS
-//1. POST WITH COMMENTS
-export interface PostWithCommentsDatas {
-  _id: string;
-  userId: UserDataInPosts;
-  title: string;
-  body: string;
-  comments: string[];
-  likedBy: string[];
-  date: string;
+//Datas
+//1. Users
+export interface MobileUserDatas {
+  cover:string;
+  email:string;
+  fname:string;
+  isActive: boolean;
+  lname:string;
+  socketID:string;
+  tel:string; 
+  useRole:string;
+  _id:string;
 }
 
 export interface CommentDatas {
@@ -222,10 +224,9 @@ export enum MessageServerType {
 }
 // Request Keys Datas
 export enum REQUEST_KEYS {
-  HOME_POST = 'HOME_POST',
-  SEARCH_POST = 'SEARCH_POST',
-  SEARCH_DEBATES = 'SEARCH_DEBATES',
-  SEARCH_POLLS = 'SEARCH_POLLS',
+  HOME_CLIENTS = 'HOME_CLIENTS',
+  HOME_DEALER = 'HOME_DEALER',
+  SEARCH = 'SEARCH',
   SEARCH_MEETINGS = 'SEARCH_MEETINGS',
   PROFILE_POST = 'PROFILE_POST',
   PROFILE_DEBATES = 'PROFILE_DEBATES',

@@ -30,7 +30,7 @@ export const RegTabValue = [
     label: 'Nom complet',
     id: 0,
     type: 'none',
-    placeholder: 'Elie Ruvinga',
+    placeholder: 'Cherubin Mahamba',
     secure: false,
     checked: true,
     errorType: ValidatesDatasErrors.NAME,

@@ -26,10 +26,43 @@
 
 .ContentDatas .NavTitle {
   display: flex;
-  padding: 18px 0;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
   width: 100%;
   max-width: 1100px;
 }
+
+.ContentDatas .NavTitle h1 {
+  color: #11181c;
+  font-size: 1.4em;
+  font-family: poppinBold;
+  text-align: center;
+}
+
+.ContentDatas .searchSection{
+  background-color: transparent;
+  border: solid 1px #b6b5bc;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding-left: 10px;
+  gap: 4px;
+}
+
+.ContentDatas .searchSection .SearchInput{
+  height: 40px;
+  font-family: poppinMedium;
+  color: #9ba1a6;
+  border: none;
+  background-color: transparent;
+}
+
+.SearchInput:focus{
+  outline: none;
+}
+
 
 .ContentDatas .Buttons {
   display: flex;
@@ -53,15 +86,10 @@
   border-radius: 6px;
   box-shadow: 0 0 5px #f0f3f8;
 }
+
 .ContentDatas .ReloadingBtn:hover {
   opacity: .8;
   cursor: pointer;
-}
-
-.ContentDatas .NavTitle h1 {
-  color: #11181c;
-  font-size: 1.1em;
-  font-family: poppinBold;
 }
 
 .ContainerDatasApp {
@@ -73,6 +101,12 @@
   gap: 20px;
 }
 
+.CardContainer {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 .FilterList {
   flex-grow: 1;
   height: auto;
@@ -83,20 +117,11 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-
 }
 .FilterList .Title {
   color: #9ba1a6;
   font-size: .9em;
   font-family: poppinRegular;
-}
-
-.CardContainer {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
 }
 
 /*List Users*/
@@ -125,6 +150,7 @@
   font-family: MonoRegular;
   color: #9ba1a6;
 }
+
 
 /*Medias Querries*/
 @media screen and (min-width: 550px) {

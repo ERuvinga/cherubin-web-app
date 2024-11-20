@@ -9,9 +9,9 @@ export const AgreeConditionState = atom({
 export const API = atom({
   key: 'apiDatas',
   default: {
-    LINK: 'https://cherubin-restefull-api.onrender.com',
+    LAN_LINK: 'https://cherubin-restefull-api.onrender.com',
     LOCAL_LINK: 'http://localhost:5000',
-    LAN_LINK: 'http://localhost:8010/proxy', //for local Proxy Testing
+    LINK: 'http://localhost:8010/proxy', //for local Proxy Testing
     SIGN_IN: '/Authentification/AdminLogin',
     SIGN_UP: '/Authentification/CreateUser',
 
@@ -25,9 +25,9 @@ export const API = atom({
     RESET_PWD: '/reset-password',
     LOGOUT: '/logout',
 
-    // POSTS
-    POSTS: '/posts',
-    DEBAT_POSTS: '/postsDebate',
+    // Users
+    GET_USERS: '/Users',
+    DELETE_USER: '/Users/Delete/',
     DEBAT_FILTER: '/debate/filter',
     DEBATs_POSTS: '/postDebate',
     LIKES_POSTS: '/posts/like',
